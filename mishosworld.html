@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Misho's world</title>
+    <style>
+        body{
+        background-color: #88DFAF;
+        }
+        div{
+        text-align: center;
+        }
+
+        p{
+        font-family: 'VT323', monospace;
+        font-size : 40px;
+        position: relative;
+        top: -40px;
+        }
+
+        #xachapuri{
+        position: fixed;
+        left: -80px;
+        top:300px;
+
+        }
+         #lantern{
+        position: fixed;
+        right: -120px;
+        top:120px;
+
+        }
+        .rounded{
+        height: 20vh;
+        width: 20vh;
+        border-radius: 50rem;
+        background-color: purple;
+        }
+        .image-cropper {
+        width: 200px;
+        height: 200px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 50%;
+        }
+
+        .wre {
+        display: inline;
+        margin: 0 auto;
+        height: 100%;
+        position: relative;
+        width: auto;
+        }
+        #links{
+        background-image: url("./links.png");
+        height:390px;
+        width:590px;
+        position:relative;
+        top:-230px;
+        left:460px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <img id="moon" width = "120px" height ="120px" src="./outlinedmoon.gif"/>
+        <p id="text" >MISHO'S WORLD</p>
+            <div class="image-cropper">
+                <img class="wre" src="./pinkarcade.gif" class="rounded" />
+            </div>
+            <div class="image-cropper" style="top: 100px; right:30px; float:right">
+                <img class="wre" src="./brekkfest.gif" class="rounded" />
+            </div>
+        <div id="links">
+        </div>
+        <img src="./botbagh.png " style="position:relative; top:-800px; float:right; left:100px;">
+    </div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.jrumble.1.3.js"></script>
+    <script>
+// Demo 20
+$('#text').jrumble();
+var demoTimeout;
+var demoStart = function(){
+	$('#text').trigger('startRumble');
+	setTimeout(demoStop, 300);
+};
+
+var demoStop = function(){
+	$('#text').trigger('stopRumble');
+	setTimeout(demoStart, 300);
+};
+
+demoStart();
+    </script>
+</body>
+</html>
